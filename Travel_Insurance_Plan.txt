@@ -1,2 +1,2 @@
-Standard,Standard coverage plan,500
-Premium,Premium global annual coverage plan,5000
+Standard, Standard coverage plan, 300
+Premium, Premium global annual coverage plan, 5000

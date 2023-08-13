@@ -11,7 +11,7 @@ class MedicalInsurancePlan:
 class User:
     def __init__(self, age, health_condition):
         self.age = age
-        self.health_condition = health_condition  # "good" or "poor"
+        self.health_condition = health_condition  
 
 
 def read_file():
@@ -38,9 +38,9 @@ class InsuranceQuoteSystem:
         self.plans = read_file()  # Call the read_file method here
 
     def get_best_plan_for(self, user: User):
-        if user.age < 30 and user.health_condition == "yes":
+        if user.age < 30 and user.health_condition == "no":
             return self.plans["Bronze"]
-        elif (user.age >= 30 and user.health_condition == "yes") or (user.health_condition == "no" and user.age < 30):
+        elif (user.age >= 30 and user.health_condition == "no") or (user.health_condition == "yes" and user.age < 30):
             return self.plans["Silver"]
         else:
             return self.plans["Gold"]

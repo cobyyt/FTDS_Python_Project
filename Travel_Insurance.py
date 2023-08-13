@@ -32,8 +32,8 @@ def calculate_quote(plan, user: Traveller):
     base_rate = plan.base_rate
     if user.destination.lower() in ['usa', 'canada']:
         base_rate += 30
-    if user.trip_duration > 7:
-        base_rate += 10
+    if user.trip_duration > 5:
+        base_rate += user.trip_duration * 5
     return base_rate
 
 
@@ -47,4 +47,7 @@ class TravelQuoteSystem:
             quote = calculate_quote(plan, user)
             return plan, quote
         else:
-            return self.plans["Premium"], None
+            plan = self.plans["Premium"]
+            quote = self.plans["Premium"].base_rate
+            return plan, quote
+
