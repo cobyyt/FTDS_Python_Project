@@ -3,7 +3,7 @@ from Travel_Insurance import *
 
 def get_user_input():
     while True:
-        inp = int(input('What kind of insurance are you looking for?\n 1. Medical Insurance\n 2. Travel Insurance\n'))
+        inp = int(input('What kind of insurance are you looking for?\n 1. Medical Insurance\n 2. Travel Insurance\n Type: '))
         if inp == 1:
 
             # Instantiate the InsuranceQuoteSystem
@@ -26,13 +26,13 @@ def get_user_input():
             break
             
         elif inp == 2:
-            quote_system1 = TravelQuoteSystem()
+            quote_system_tarvel = TravelQuoteSystem()
             destination = input("Please enter your destination: ")
             trip_duration = int(input("How many days will you travel? "))
-            user1 = Traveller(destination, trip_duration)
-            best_plan1, quote1 = quote_system1.get_best_plan_for(user1)
-            print(f"The best plan for you is: {best_plan1.name}\n - {best_plan1.description}\n"
-                    f"Quote: ${quote1}\n"
+            traveller = Traveller(destination, trip_duration)
+            best_plan_tarvel, quote_travel = quote_system_tarvel.get_best_plan_for(traveller)
+            print(f"The best plan for you is: {best_plan_tarvel.name}\n - {best_plan_tarvel.description}\n"
+                    f"Quote: ${quote_travel}\n"
                         f"------------------------------------------------------------------------------------")
             break
             
