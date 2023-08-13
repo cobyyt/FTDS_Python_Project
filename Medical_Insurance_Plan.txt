@@ -1,0 +1,3 @@
+Bronze, For young people in good health., 100000, 2000
+Silver, For older people in good health or young people in poor health., 200000, 3500
+Gold, For older people in poor health., 500000, 5000

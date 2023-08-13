@@ -1,0 +1,2 @@
+Standard,Standard coverage plan,500
+Premium,Premium global annual coverage plan,5000
