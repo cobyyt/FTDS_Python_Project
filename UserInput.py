@@ -21,7 +21,7 @@ def get_user_input():
 
             # Display the result
             print(f"The best plan for you is: {best_plan.name}\n- {best_plan.description}\n "
-                    f"Maximum Insurance Coverage: ${best_plan.coverage}\n Quote: ${best_plan.base_rate + user.age*2}/year\n"
+                    f"Maximum Insurance Coverage: ${best_plan.coverage:,}\n Quote: ${best_plan.base_rate + user.age*2:,}/year\n"
                         f"------------------------------------------------------------------------------------")
             break
             
@@ -32,7 +32,7 @@ def get_user_input():
             traveller = Traveller(destination, trip_duration)
             best_plan_tarvel, quote_travel = quote_system_tarvel.get_best_plan_for(traveller)
             print(f"The best plan for you is: {best_plan_tarvel.name}\n - {best_plan_tarvel.description}\n"
-                    f"Quote: ${quote_travel}\n"
+                    f"Quote: ${quote_travel:,}\n"
                         f"------------------------------------------------------------------------------------")
             break
             
