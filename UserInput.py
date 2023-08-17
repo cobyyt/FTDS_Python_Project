@@ -2,7 +2,7 @@ from Medical_Insurance import *
 from Travel_Insurance import *
 
 def get_user_input():
-    print('********************************************************************')
+    print('----------------------- Insurance Quote System -----------------------')
     while True:
         try:
             inp = int(input('What kind of insurance are you looking for?\n 1. Medical Insurance\n 2. Travel Insurance\n Type: '))
@@ -70,10 +70,8 @@ def get_user_input():
                 break
                 
             else:
-                # Invalid input
-                print("Please input 1 or 2")
-                print("------------------------------------------------------------------------------------")
+                print("Please input 1 or 2")              
 
         except ValueError:
             print("Invalid input. Please input 1 or 2")
-            print("------------------------------------------------------------------------------------")
+            

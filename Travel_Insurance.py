@@ -22,6 +22,7 @@ def read_file():
                 base_rate = float(data[2])
                 plan = TravelInsurancePlan(name, description, base_rate)
                 plans[name] = plan
+            file.close()
     except FileNotFoundError:
         print(f"File 'Travel_Insurance_Plan.txt' not found.")
 
