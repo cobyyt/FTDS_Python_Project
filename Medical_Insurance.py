@@ -32,6 +32,11 @@ def read_file():
 
     return plans
 
+def calculate_quote(plan, user: User):
+    base_rate = plan.base_rate 
+    base_rate += user.age * 2.5
+    return base_rate
+
 
 class InsuranceQuoteSystem:
     def __init__(self):
@@ -39,9 +44,15 @@ class InsuranceQuoteSystem:
 
     def get_best_plan_for(self, user: User):
         if user.age < 30 and user.health_condition == "no":
-            return self.plans["Bronze"]
+            plan = self.plans["Bronze"]
+            quote = calculate_quote(plan, user)
+            return plan, quote
         elif (user.age >= 30 and user.health_condition == "no") or (user.health_condition == "yes" and user.age < 30):
-            return self.plans["Silver"]
+            plan = self.plans["Silver"]
+            quote = calculate_quote(plan, user)
+            return plan, quote
         else:
-            return self.plans["Gold"]
+            plan = self.plans["Gold"]
+            quote = calculate_quote(plan, user)
+            return plan, quote
 
